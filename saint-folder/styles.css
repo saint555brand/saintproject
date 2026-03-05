@@ -158,17 +158,25 @@ box-shadow:0 0 35px white;
 /* ================= PAGE TRANSITION ================= */
 
 .saint-transition{
+background-image:url(backtransition2.jpeg);
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+
 position:fixed;
 inset:0;
-background:black;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 opacity:0;
 pointer-events:none;
 z-index:999999;
-transition:opacity 1.2s ease; /* transición más larga */
+
+transition:opacity 1.2s ease;
 }
+
 
 .saint-transition.active{
 opacity:1;
@@ -185,7 +193,7 @@ font-family:'Ballet',cursive;
 font-size:70px;
 color:#E3DFCF;
 letter-spacing:3px;
-margin-bottom:20px;
+margin-top: 10px;
 text-align:center;
 white-space:nowrap;
 animation:textGlow 2s ease-in-out infinite;
@@ -193,54 +201,54 @@ animation:textGlow 2s ease-in-out infinite;
 
 .mini-cross{
 position:absolute;
-width:60px;
+width: 60px;
 animation:crossGlow 2s ease-in-out infinite;
 }
 
 /* NUEVA DISTRIBUCIÓN */
 
 /* arriba */
+/* ================= POSICION CRUCES TRANSICION ================= */
+
+/* ================= POSICION CRUCES TRANSICION ================= */
+
 .cross1{
-top:-120px;
-left:calc(50% - 40px);
+top:-180px;
+left:-40px;
 }
 
 .cross2{
-top:-120px;
-left:calc(50% + 40px);
+top:-180px;
+right:-40px;
 }
 
-/* abajo */
 .cross3{
-bottom:-120px;
-left:calc(50% - 40px);
+top:-60px;
+left:-260px;
 }
 
 .cross4{
-bottom:-120px;
-left:calc(50% + 40px);
+top:-60px;
+right:-260px;
 }
 
-/* izquierda */
 .cross5{
-left:-140px;
-top:calc(50% - 40px);
+bottom:-60px;
+left:-260px;
 }
 
 .cross6{
-left:-140px;
-top:calc(50% + 40px);
+bottom:-60px;
+right:-260px;
 }
-
-/* derecha */
 .cross7{
-right:-140px;
-top:calc(50% - 40px);
+bottom:-180px;
+left:-40px;
 }
 
 .cross8{
-right:-140px;
-top:calc(50% + 40px);
+bottom:-180px;
+right:-40px;
 }
 
 /* ================= SHOP ================= */

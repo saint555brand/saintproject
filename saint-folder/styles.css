@@ -221,6 +221,9 @@ header p {
 .titulo2{
 color: #E3DFCF;
 }
+.subtituloshop{
+  color: #E3DFCF;
+}
 
 .products {
   display: flex;
@@ -231,12 +234,12 @@ color: #E3DFCF;
 }
 
 .product-card {
-  background: rgba(0,0,0,0.05);
-  backdrop-filter: blur(8px);
+  background: transparent;
   padding: 20px;
   text-align: center;
   width: 300px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   transition: 0.4s;
 }
 

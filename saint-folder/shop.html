@@ -1,99 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>SAINT555 - Shop</title>
 
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>SAINT555 - Shop</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Ballet&family=UnifrakturMaguntia&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Ballet&family=UnifrakturMaguntia&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="shop-body">
- <div class="custom-cursor"></div>
+
+<div class="custom-cursor"></div>
 
 
 <header class="navbar">
-  <div class="logo shop-logo-black">SAINT555</div>
-  <nav>
-    <a href="index.html" class="shop-link-black">Home</a>
-    <a href="shop.html" class="active shop-link-black">Shop</a>
-  </nav>
+
+<div class="logo">SAINT555</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="shop.html" class="active">Shop</a>
+
+</nav>
+
 </header>
 
+
 <section class="shop-hero">
-  <h1 class="titulo2">
-    THE SAIN<span class="shop-cross-container">
-      <img src="cruzmouseblanca.png" class="cross-symbol shop-cross" id="shopCross">
-    </span> COLLECTION
-  </h1>
-  <p class="subtituloshop">Prendas limitadas. No restock.</p>
+
+<h1 class="titulo2">
+
+THE SAIN
+
+<span class="shop-cross-container">
+
+<img src="cruzmouseblanca.png" class="cross-symbol shop-cross">
+
+</span>
+
+COLLECTION
+
+</h1>
+
 </section>
+
 
 <section class="products">
 
-  <div class="product-card">
-    <img src="producto1.jpg">
-    <h2>ANILLO 555</h2>
-    <p>$15 USD</p>
-    <button>COMPRAR</button>
-  </div>
+<div class="product-card">
 
-  <div class="product-card">
-    <img src="producto2.jpg">
-    <h2>BAGGY JEAN "SWAG"</h2>
-    <p>$90 USD</p>
-    <button>COMPRAR</button>
-  </div>
+<img src="producto1.jpg">
 
-  <div class="product-card">
-    <img src="producto3.png">
-    <h2>REMERA "CALA HERVAS"</h2>
-    <p>$120 USD</p>
-    <button>COMPRAR</button>
-  </div>
+<h2>ANILLO 555</h2>
+
+<p>$15 USD</p>
+
+<button>COMPRAR</button>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="producto2.jpg">
+
+<h2>BAGGY JEAN "SWAG"</h2>
+
+<p>$90 USD</p>
+
+<button>COMPRAR</button>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="producto3.png">
+
+<h2>REMERA "CALA HERVAS"</h2>
+
+<p>$120 USD</p>
+
+<button>COMPRAR</button>
+
+</div>
 
 </section>
 
+
 <footer class="main-footer">
-  <p>© SAINT 555 — ALL RIGHTS RESERVED</p>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com/saint___555" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
+<p>© SAINT 555 — ALL RIGHTS RESERVED</p>
 
-    <a href="https://www.tiktok.com/@saint___555" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
+<div class="social-icons">
 
-    <a href="https://www.facebook.com" target="_blank">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-  </div>
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+</div>
+
 </footer>
+
 <script>
-const cursor = document.querySelector(".custom-cursor");
 
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+const cursor=document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove",e=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 });
 
-/* efecto hover ultra clean */
-const hoverElements = document.querySelectorAll("a, button");
-
-hoverElements.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
-  });
+document.querySelectorAll("a,button").forEach(el=>{
+el.addEventListener("mouseenter",()=>cursor.classList.add("hover"));
+el.addEventListener("mouseleave",()=>cursor.classList.remove("hover"));
 });
+
 </script>
+
 </body>
 </html>

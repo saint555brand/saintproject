@@ -1,120 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAINT555</title>
 
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ballet&family=UnifrakturMaguntia&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>SAINT555</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Ballet&family=UnifrakturMaguntia&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
+
 <div class="custom-cursor"></div>
-<!-- INTRO -->
-<div id="intro">
-  <div class="intro-content">
-    <img src="cruzmouseblanca.png" class="intro-cross" id="introCross">
-    <div class="intro-logo hidden" id="introLogo">
-      <span class="intro-s">s</span>aint 555
-    </div>
-  </div>
+
+<!-- TRANSICION -->
+
+<div class="saint-transition">
+
+<div class="transition-content">
+
+<div class="transition-text">Can´t rush greatness</div>
+
+<img src="cruzmouseblanca.png" class="mini-cross cross1">
+<img src="cruzmouseblanca.png" class="mini-cross cross2">
+
+<img src="cruzmouseblanca.png" class="mini-cross cross3">
+<img src="cruzmouseblanca.png" class="mini-cross cross4">
+
+<img src="cruzmouseblanca.png" class="mini-cross cross5">
+<img src="cruzmouseblanca.png" class="mini-cross cross6">
+
+<img src="cruzmouseblanca.png" class="mini-cross cross7">
+<img src="cruzmouseblanca.png" class="mini-cross cross8">
+
+</div>
+
 </div>
 
 
-<!-- WEB -->
+<!-- INTRO -->
+
+<div id="intro">
+
+<div class="intro-content">
+
+<img src="cruzmouseblanca.png" class="intro-cross" id="introCross">
+
+<div class="intro-logo hidden" id="introLogo">
+<span class="intro-s">s</span>aint 555
+</div>
+
+</div>
+</div>
+
+
 <header>
-  <h1 class="logo hidden" id="finalLogo">
-    <span class="sain">Sain</span>
-    <img src="cruzmouseblanca.png" class="cross-symbol" id="finalCross">555
-  </h1>
-  <p>Can’t rush greatness.</p>
-  <button class="btn" onclick="window.location.href='shop.html'">VER PRODUCTOS</button>
+
+<h1 class="logo hidden" id="finalLogo">
+
+<span class="sain">Sain</span>
+
+<img src="cruzmouseblanca.png" class="cross-symbol" id="finalCross">
+
+555
+
+</h1>
+
+<p>Can’t rush greatness.</p>
+
+<button class="btn">VER PRODUCTOS</button>
+
 </header>
 
-<!-- FOOTER GLOBAL -->
+
 <footer class="main-footer">
-  <p>© SAINT 555 — ALL RIGHTS RESERVED</p>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com/saint___555" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
+<p>© SAINT 555 — ALL RIGHTS RESERVED</p>
 
-    <a href="https://www.tiktok.com/@saint___555" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
+<div class="social-icons">
 
-    <a href="https://www.facebook.com" target="_blank">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-  </div>
+<a href="https://www.instagram.com/saint___555" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/@saint___555" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
+
 </footer>
 
+
 <script>
-/* ================= CURSOR (IGUAL QUE SHOP) ================= */
+
+/* CURSOR */
 
 const cursor = document.querySelector(".custom-cursor");
 
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+document.addEventListener("mousemove", e=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 });
 
-const hoverElements = document.querySelectorAll("a, button");
-
-hoverElements.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
-  });
+document.querySelectorAll("a,button").forEach(el=>{
+el.addEventListener("mouseenter",()=>cursor.classList.add("hover"));
+el.addEventListener("mouseleave",()=>cursor.classList.remove("hover"));
 });
 
 
-/* ================= INTRO ORIGINAL (NO TOCAMOS DISEÑO) ================= */
+/* INTRO */
 
-const introCross = document.getElementById("introCross");
-const introLogo = document.getElementById("introLogo");
-const finalCross = document.getElementById("finalCross");
-const finalLogo = document.getElementById("finalLogo");
+const introCross=document.getElementById("introCross");
+const introLogo=document.getElementById("introLogo");
+const finalCross=document.getElementById("finalCross");
+const finalLogo=document.getElementById("finalLogo");
 
-setTimeout(() => {
-  introLogo.classList.remove("hidden");
-}, 1000);
+setTimeout(()=>{introLogo.classList.remove("hidden")},1000);
+setTimeout(()=>{introLogo.classList.add("hidden")},2200);
 
-setTimeout(() => {
-  introLogo.classList.add("hidden");
-}, 2200);
+setTimeout(()=>{
 
-setTimeout(() => {
-  const target = finalCross.getBoundingClientRect();
-  const start = introCross.getBoundingClientRect();
+const target=finalCross.getBoundingClientRect();
+const start=introCross.getBoundingClientRect();
 
-  const dx = target.left + target.width / 2 - (start.left + start.width / 2);
-  const dy = target.top + target.height / 2 - (start.top + start.height / 2);
+const dx=target.left+target.width/2-(start.left+start.width/2);
+const dy=target.top+target.height/2-(start.top+start.height/2);
 
-  introCross.style.transition = "transform 1.6s cubic-bezier(.77,0,.18,1), width 1.6s";
-  introCross.style.transform = `translate(${dx}px, ${dy}px)`;
-  introCross.style.width = "130px";
-}, 2400);
+introCross.style.transition="transform 1.6s cubic-bezier(.77,0,.18,1),width 1.6s";
+introCross.style.transform=`translate(${dx}px,${dy}px)`;
+introCross.style.width="130px";
 
-setTimeout(() => {
-  finalLogo.classList.remove("hidden");
-}, 4100);
+},2400);
 
-setTimeout(() => {
-  document.getElementById("intro").style.opacity = "0";
-  document.getElementById("intro").style.pointerEvents = "none";
-}, 4500);
+setTimeout(()=>{finalLogo.classList.remove("hidden")},4100);
+
+setTimeout(()=>{
+document.getElementById("intro").style.opacity="0";
+document.getElementById("intro").style.pointerEvents="none";
+},4500);
+
+
+/* PAGE TRANSITION */
+
+const transition=document.querySelector(".saint-transition");
+
+function goToPage(url){
+
+transition.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=url;
+},2000);
+
+}
+
+document.querySelector(".btn").addEventListener("click",function(e){
+
+e.preventDefault();
+
+goToPage("shop.html");
+
+});
+
+document.querySelectorAll("a").forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+const href=this.getAttribute("href");
+
+if(href && !href.startsWith("#")){
+
+e.preventDefault();
+
+goToPage(href);
+
+}
+
+});
+
+});
+
 </script>
+
 </body>
 </html>

@@ -142,7 +142,7 @@ box-shadow:0 0 35px white;
 /* ================= PAGE TRANSITION ================= */
 
 .saint-transition{
-background-image:url(backtransition2.jpeg);
+background-color: black;
 background-repeat:no-repeat;
 background-position:center;
 background-size:cover;
@@ -363,7 +363,7 @@ color:#5c3a21!important;
 /* ================= PRODUCT PAGE ================= */
 
 .product-body{
-background:#3b2414;
+background-image: url(backimageproducto.jpeg);
 }
 
 /* NAVBAR ARRIBA DERECHA */
@@ -465,16 +465,23 @@ background:#5c3a21;
 
 .product-buy{
 padding:12px 35px;
-border:none;
-background:black;
+background:transparent;
 color:white;
 font-weight:600;
 letter-spacing:2px;
 cursor:none;
 transition:.35s;
+border: 1px solid #E3DFCF;
 }
 
 .product-buy:hover{
 background:#5c3a21;
 color:#E3DFCF;
+}
+/* FIX HEADER PRODUCTO */
+
+.top-bar{
+height:auto !important;
+display:block !important;
+padding-top:20px;
 }

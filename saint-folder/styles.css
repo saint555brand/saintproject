@@ -1,4 +1,8 @@
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 /* ================= BODY GENERAL ================= */
 
@@ -40,40 +44,9 @@ text-align:center;
 100%{ filter:drop-shadow(0 0 5px white) drop-shadow(0 0 10px white); }
 }
 
-@keyframes textGlow{
-0%{ text-shadow:0 0 5px white,0 0 10px white; }
-50%{ text-shadow:0 0 20px white,0 0 40px white; }
-100%{ text-shadow:0 0 5px white,0 0 10px white; }
-}
-
-@keyframes orbitLeft{
-
-0%{
-transform:rotate(0deg) translateX(220px) rotate(0deg);
-}
-
-100%{
-transform:rotate(-360deg) translateX(220px) rotate(360deg);
-}
-
-}
 .intro-cross{
 width:90px;
 animation:crossGlow 2s ease-in-out infinite;
-}
-
-.intro-logo{
-font-family:'UnifrakturMaguntia',cursive;
-font-size:100px;
-margin-top:10px;
-transition:opacity .4s ease;
-color:#E3DFCF;
-}
-
-.intro-logo .intro-s{
-font-size:150px;
-line-height:120px;
-display:inline-block;
 }
 
 .hidden{
@@ -103,7 +76,7 @@ filter:drop-shadow(0 0 12px white) drop-shadow(0 0 30px white);
 
 /* ================= HEADER INDEX ================= */
 
-header:not(.navbar){
+body:not(.product-body):not(.shop-body) header{
 height:100vh;
 display:flex;
 flex-direction:column;
@@ -129,7 +102,6 @@ margin-top:12px;
 font-size:40px;
 font-weight:700;
 color:#E3DFCF;
-animation:textGlow 2s ease-in-out infinite;
 }
 
 .btn{
@@ -153,10 +125,7 @@ box-shadow:0 0 35px white;
 /* ================= PAGE TRANSITION ================= */
 
 .saint-transition{
-background-color: black;
-background-repeat:no-repeat;
-background-position:center;
-background-size:cover;
+background-color:black;
 position:fixed;
 inset:0;
 display:flex;
@@ -178,25 +147,22 @@ position:relative;
 text-align:center;
 }
 
-/* QUITAMOS GLOW DEL TEXTO */
-
 .transition-text{
 font-family:'Ballet',cursive;
 font-size:70px;
 color:#E3DFCF;
 letter-spacing:3px;
 margin-top:10px;
-text-align:center;
 white-space:nowrap;
 }
+
+/* ================= CRUCES ================= */
 
 .mini-cross{
 position:absolute;
 width:60px;
-animation:orbitLeft 6s linear infinite, crossGlow 2s ease-in-out infinite;
+animation:crossGlow 2s ease-in-out infinite;
 }
-
-/* ================= POSICION CRUCES ================= */
 
 .cross1{ top:-180px; left:-40px; }
 .cross2{ top:-180px; right:-40px; }
@@ -230,7 +196,6 @@ transition:.3s ease;
 
 .navbar .logo:hover{
 color:#3b2414;
-text-shadow: 0 0 10px rgba(59,36,20,0.6), 0 0 20px rgba(59,36,20,0.4);
 }
 
 .navbar a{
@@ -243,7 +208,6 @@ transition:.3s ease;
 
 .navbar a:hover{
 color:#3b2414;
-text-shadow: 0 0 10px rgba(59,36,20,0.6), 0 0 20px rgba(59,36,20,0.4);
 }
 
 .shop-hero{
@@ -259,16 +223,8 @@ display:inline-flex;
 align-items:center;
 }
 
-.shop-cross-container{
-display:inline-flex;
-align-items:center;
-}
-
 .shop-cross{
 width:42px;
-height:auto;
-display:inline-block;
-vertical-align:middle;
 margin-left:-10px;
 margin-right:4px;
 animation:crossGlow 2s ease-in-out infinite;
@@ -293,7 +249,6 @@ background:transparent;
 padding:20px;
 text-align:center;
 width:300px;
-border:none;
 box-shadow:0 10px 30px rgba(0,0,0,.15);
 transition:.4s;
 }
@@ -323,8 +278,6 @@ color:#E3DFCF;
 color:#E3DFCF;
 }
 
-/* BOTON CREMA */
-
 .product-card button{
 margin-top:10px;
 padding:10px 20px;
@@ -349,66 +302,63 @@ padding:50px 0;
 font-family:'Montserrat',sans-serif;
 letter-spacing:2px;
 }
-.main-footer .social-icons a{
-font-size:22px;
-margin:0 12px;
-text-decoration:none;
-}
+
 .social-icons{
-list-style:none;
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
 }
+
+.social-icons a{
+text-decoration:none;
+font-size:22px;
+}
+
+/* footer shop */
+
 .shop-body .main-footer{
 color:#5c3a21;
 }
+
+.shop-body .social-icons a{
+color:#5c3a21;
+}
+
+.shop-body .social-icons a:hover{
+color:#E3DFCF;
+}
+
+/* footer producto */
 
 .product-body .main-footer{
 color:#E3DFCF;
 }
 
-.main-footer .social-icons{
-margin-top:20px;
+.product-body .social-icons a{
+color:#E3DFCF;
 }
 
-.shop-body .social-icons a i{
-color:#5c3a21!important;
-}
-
-.shop-body .social-icons a:hover i{
-color:#E3DFCF!important;
-}
-
-.product-body .social-icons a i{
-color:#E3DFCF!important;
-}
-
-.product-body .social-icons a:hover i{
-color:#5c3a21!important;
-}
-/* ICONOS INDEX */
-
-body:not(.shop-body):not(.product-body) .social-icons a i{
-color:#E3DFCF!important;
-}
-
-body:not(.shop-body):not(.product-body) .social-icons a:hover i{
-color:#5c3a21!important;
+.product-body .social-icons a:hover{
+color:#5c3a21;
 }
 
 /* ================= PRODUCT PAGE ================= */
 
 .product-body{
-background-image: url(backimageproducto.jpeg);
+background-image:url(backimageproducto.jpeg);
 }
 
+/* NAVBAR */
+
 .top-bar{
-position:relative;
-height:0;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:10px 80px 0 80px;
 }
 
 .nav-right{
-position:absolute;
-top:40px;
-right:80px;
 display:flex;
 gap:25px;
 }
@@ -426,22 +376,26 @@ transition:.3s;
 color:#5c3a21;
 }
 
+/* LOGO */
+
 .product-logo-section{
 text-align:center;
-margin-top:10px;
-margin-bottom:40px;
+margin-top:0px;
+margin-bottom:10px;
 }
 
 .product-cross{
 margin-left:-55px;
 }
 
+/* PRODUCTO */
+
 .product-container{
 display:flex;
 justify-content:center;
 align-items:center;
-gap:80px;
-padding:40px;
+gap:60px;
+padding:0 40px 40px 40px;
 flex-wrap:wrap;
 }
 
@@ -456,11 +410,6 @@ box-shadow:0 20px 40px rgba(0,0,0,.4);
 max-width:420px;
 font-family:'Montserrat',sans-serif;
 color:#E3DFCF;
-}
-
-.product-info h2{
-letter-spacing:3px;
-margin-bottom:15px;
 }
 
 .product-description{
@@ -489,10 +438,6 @@ color:#E3DFCF;
 border-color:#5c3a21;
 }
 
-.size-selector button:hover{
-background:#5c3a21;
-}
-
 .product-buy{
 padding:12px 35px;
 background:transparent;
@@ -501,16 +446,10 @@ font-weight:600;
 letter-spacing:2px;
 cursor:none;
 transition:.35s;
-border: 1px solid #E3DFCF;
+border:1px solid #E3DFCF;
 }
 
 .product-buy:hover{
 background:#5c3a21;
 color:#E3DFCF;
-}
-
-.top-bar{
-height:auto !important;
-display:block !important;
-padding-top:20px;
 }

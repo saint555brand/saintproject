@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -18,15 +19,20 @@
 
 </head>
 
+
 <body>
 
 <div class="custom-cursor"></div>
+
+<!-- TRANSICION ENTRE PAGINAS -->
 
 <div class="saint-transition">
 
 <div class="transition-content">
 
-<div class="transition-text">Can´t rush greatness...</div>
+<div class="transition-text">
+Can´t rush greatness...
+</div>
 
 <img src="cruzmouseblanca.png" class="mini-cross cross1">
 <img src="cruzmouseblanca.png" class="mini-cross cross2">
@@ -38,8 +44,9 @@
 <img src="cruzmouseblanca.png" class="mini-cross cross8">
 
 </div>
-
 </div>
+
+<!-- INTRO ANIMADA -->
 
 <div id="intro">
 
@@ -50,6 +57,7 @@
 </div>
 </div>
 
+<!-- HEADER -->
 
 <header>
 
@@ -65,10 +73,14 @@
 
 <p>Cool people only.</p>
 
-<button class="btn"> VER PRODUCTOS</button>
+<button class="btn">
+VER PRODUCTOS
+</button>
 
 </header>
 
+
+<!-- FOOTER -->
 
 <footer class="main-footer">
 
@@ -95,52 +107,74 @@
 
 <script>
 
+/* ================= CURSOR ================= */
+
 const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", e=>{
-cursor.style.left=e.clientX+"px";
-cursor.style.top=e.clientY+"px";
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
 });
 
 document.querySelectorAll("a,button").forEach(el=>{
-el.addEventListener("mouseenter",()=>cursor.classList.add("hover"));
-el.addEventListener("mouseleave",()=>cursor.classList.remove("hover"));
+
+el.addEventListener("mouseenter",()=>{
+cursor.classList.add("hover");
 });
 
-const introCross=document.getElementById("introCross");
-const finalCross=document.getElementById("finalCross");
-const finalLogo=document.getElementById("finalLogo");
+el.addEventListener("mouseleave",()=>{
+cursor.classList.remove("hover");
+});
+
+});
+
+
+/* ================= INTRO ANIMATION ================= */
+
+const introCross = document.getElementById("introCross");
+const finalCross = document.getElementById("finalCross");
+const finalLogo = document.getElementById("finalLogo");
 
 setTimeout(()=>{
 
-const target=finalCross.getBoundingClientRect();
-const start=introCross.getBoundingClientRect();
+const target = finalCross.getBoundingClientRect();
+const start = introCross.getBoundingClientRect();
 
-const dx=target.left+target.width/2-(start.left+start.width/2);
-const dy=target.top+target.height/2-(start.top+start.height/2);
+const dx = target.left + target.width/2 - (start.left + start.width/2);
+const dy = target.top + target.height/2 - (start.top + start.height/2);
 
-introCross.style.transition="transform 1.6s cubic-bezier(.77,0,.18,1),width 1.6s";
-introCross.style.transform=`translate(${dx}px,${dy}px)`;
-introCross.style.width="130px";
+introCross.style.transition = "transform 1.6s cubic-bezier(.77,0,.18,1), width 1.6s";
+
+introCross.style.transform = `translate(${dx}px,${dy}px)`;
+
+introCross.style.width = "130px";
 
 },1200);
 
-setTimeout(()=>{finalLogo.classList.remove("hidden")},3000);
 
 setTimeout(()=>{
-document.getElementById("intro").style.opacity="0";
-document.getElementById("intro").style.pointerEvents="none";
+finalLogo.classList.remove("hidden")
+},3000);
+
+
+setTimeout(()=>{
+
+document.getElementById("intro").style.opacity = "0";
+document.getElementById("intro").style.pointerEvents = "none";
+
 },3400);
 
 
-const transition=document.querySelector(".saint-transition");
+/* ================= PAGE TRANSITION ================= */
+
+const transition = document.querySelector(".saint-transition");
 
 function goToPage(url){
 
 transition.classList.add("active");
 
 setTimeout(()=>{
-window.location.href=url;
+window.location.href = url;
 },2000);
 
 }
@@ -148,16 +182,16 @@ window.location.href=url;
 document.querySelector(".btn").addEventListener("click",function(e){
 
 e.preventDefault();
-
 goToPage("shop.html");
 
 });
+
 
 document.querySelectorAll("a").forEach(link=>{
 
 link.addEventListener("click",function(e){
 
-const href=this.getAttribute("href");
+const href = this.getAttribute("href");
 
 if(href && !href.startsWith("#")){
 

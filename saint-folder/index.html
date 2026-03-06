@@ -22,8 +22,6 @@
 
 <div class="custom-cursor"></div>
 
-<!-- TRANSICION -->
-
 <div class="saint-transition">
 
 <div class="transition-content">
@@ -32,13 +30,10 @@
 
 <img src="cruzmouseblanca.png" class="mini-cross cross1">
 <img src="cruzmouseblanca.png" class="mini-cross cross2">
-
 <img src="cruzmouseblanca.png" class="mini-cross cross3">
 <img src="cruzmouseblanca.png" class="mini-cross cross4">
-
 <img src="cruzmouseblanca.png" class="mini-cross cross5">
 <img src="cruzmouseblanca.png" class="mini-cross cross6">
-
 <img src="cruzmouseblanca.png" class="mini-cross cross7">
 <img src="cruzmouseblanca.png" class="mini-cross cross8">
 
@@ -46,18 +41,11 @@
 
 </div>
 
-
-<!-- INTRO -->
-
 <div id="intro">
 
 <div class="intro-content">
 
 <img src="cruzmouseblanca.png" class="intro-cross" id="introCross">
-
-<div class="intro-logo hidden" id="introLogo">
-<span class="intro-s">s</span>aint 555
-</div>
 
 </div>
 </div>
@@ -75,7 +63,7 @@
 
 </h1>
 
-<p>Only for cool niggas.</p>
+<p>Cool people only.</p>
 
 <button class="btn"> VER PRODUCTOS</button>
 
@@ -107,8 +95,6 @@
 
 <script>
 
-/* CURSOR */
-
 const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", e=>{
@@ -121,16 +107,9 @@ el.addEventListener("mouseenter",()=>cursor.classList.add("hover"));
 el.addEventListener("mouseleave",()=>cursor.classList.remove("hover"));
 });
 
-
-/* INTRO */
-
 const introCross=document.getElementById("introCross");
-const introLogo=document.getElementById("introLogo");
 const finalCross=document.getElementById("finalCross");
 const finalLogo=document.getElementById("finalLogo");
-
-setTimeout(()=>{introLogo.classList.remove("hidden")},1000);
-setTimeout(()=>{introLogo.classList.add("hidden")},2200);
 
 setTimeout(()=>{
 
@@ -144,17 +123,15 @@ introCross.style.transition="transform 1.6s cubic-bezier(.77,0,.18,1),width 1.6s
 introCross.style.transform=`translate(${dx}px,${dy}px)`;
 introCross.style.width="130px";
 
-},2400);
+},1200);
 
-setTimeout(()=>{finalLogo.classList.remove("hidden")},4100);
+setTimeout(()=>{finalLogo.classList.remove("hidden")},3000);
 
 setTimeout(()=>{
 document.getElementById("intro").style.opacity="0";
 document.getElementById("intro").style.pointerEvents="none";
-},4500);
+},3400);
 
-
-/* PAGE TRANSITION */
 
 const transition=document.querySelector(".saint-transition");
 

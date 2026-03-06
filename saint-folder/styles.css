@@ -46,6 +46,17 @@ text-align:center;
 100%{ text-shadow:0 0 5px white,0 0 10px white; }
 }
 
+@keyframes orbitLeft{
+
+0%{
+transform:rotate(0deg) translateX(220px) rotate(0deg);
+}
+
+100%{
+transform:rotate(-360deg) translateX(220px) rotate(360deg);
+}
+
+}
 .intro-cross{
 width:90px;
 animation:crossGlow 2s ease-in-out infinite;
@@ -167,6 +178,8 @@ position:relative;
 text-align:center;
 }
 
+/* QUITAMOS GLOW DEL TEXTO */
+
 .transition-text{
 font-family:'Ballet',cursive;
 font-size:70px;
@@ -175,13 +188,12 @@ letter-spacing:3px;
 margin-top:10px;
 text-align:center;
 white-space:nowrap;
-animation:textGlow 2s ease-in-out infinite;
 }
 
 .mini-cross{
 position:absolute;
 width:60px;
-animation:crossGlow 2s ease-in-out infinite;
+animation:orbitLeft 6s linear infinite, crossGlow 2s ease-in-out infinite;
 }
 
 /* ================= POSICION CRUCES ================= */
@@ -240,7 +252,7 @@ padding:80px 20px 40px;
 }
 
 .shop-hero h1{
-font-size:42px;
+font-size:52px;
 font-weight:700;
 letter-spacing:4px;
 display:inline-flex;
@@ -276,8 +288,6 @@ padding:60px 40px;
 flex-wrap:wrap;
 }
 
-/* CUADRO PRODUCTO */
-
 .product-card{
 background:transparent;
 padding:20px;
@@ -287,8 +297,6 @@ border:none;
 box-shadow:0 10px 30px rgba(0,0,0,.15);
 transition:.4s;
 }
-
-/* GLOW MARRON AL PASAR */
 
 .product-card:hover{
 transform:translateY(-10px);
@@ -308,27 +316,29 @@ font-weight:700;
 letter-spacing:3px;
 font-size:16px;
 margin:15px 0 5px;
+color:#E3DFCF;
 }
 
-/* ================= BOTON COMPRAR ================= */
+.product-card p{
+color:#E3DFCF;
+}
+
+/* BOTON CREMA */
 
 .product-card button{
 margin-top:10px;
 padding:10px 20px;
 border:none;
-background:black;
-color:white;
+background:#E3DFCF;
+color:#5c3a21;
 font-weight:600;
 cursor:none;
 transition:.35s ease;
 }
 
-/* HOVER MARRON */
-
 .product-card button:hover{
 background:#5c3a21;
 color:#E3DFCF;
-box-shadow: 35px rgba(92,58,33,1.6);
 }
 
 /* ================= FOOTER ================= */
@@ -337,36 +347,58 @@ box-shadow: 35px rgba(92,58,33,1.6);
 text-align:center;
 padding:50px 0;
 font-family:'Montserrat',sans-serif;
-color:black;
 letter-spacing:2px;
+}
+.main-footer .social-icons a{
+font-size:22px;
+margin:0 12px;
+text-decoration:none;
+}
+.social-icons{
+list-style:none;
+}
+.shop-body .main-footer{
+color:#5c3a21;
+}
+
+.product-body .main-footer{
+color:#E3DFCF;
 }
 
 .main-footer .social-icons{
 margin-top:20px;
 }
 
-.main-footer .social-icons a,
-.main-footer .social-icons a i{
-color:black!important;
-text-decoration:none!important;
-font-size:24px;
-margin:0 15px;
-transition:.3s ease;
-}
-
-/* ICONS MARRON */
-
-.main-footer .social-icons a:hover i{
-transform:scale(1.2);
+.shop-body .social-icons a i{
 color:#5c3a21!important;
 }
+
+.shop-body .social-icons a:hover i{
+color:#E3DFCF!important;
+}
+
+.product-body .social-icons a i{
+color:#E3DFCF!important;
+}
+
+.product-body .social-icons a:hover i{
+color:#5c3a21!important;
+}
+/* ICONOS INDEX */
+
+body:not(.shop-body):not(.product-body) .social-icons a i{
+color:#E3DFCF!important;
+}
+
+body:not(.shop-body):not(.product-body) .social-icons a:hover i{
+color:#5c3a21!important;
+}
+
 /* ================= PRODUCT PAGE ================= */
 
 .product-body{
 background-image: url(backimageproducto.jpeg);
 }
-
-/* NAVBAR ARRIBA DERECHA */
 
 .top-bar{
 position:relative;
@@ -394,8 +426,6 @@ transition:.3s;
 color:#5c3a21;
 }
 
-/* LOGO */
-
 .product-logo-section{
 text-align:center;
 margin-top:10px;
@@ -405,8 +435,6 @@ margin-bottom:40px;
 .product-cross{
 margin-left:-55px;
 }
-
-/* PRODUCTO */
 
 .product-container{
 display:flex;
@@ -454,11 +482,13 @@ color:#E3DFCF;
 cursor:none;
 transition:.3s;
 }
+
 .size-selector button.active{
 background:#5c3a21;
 color:#E3DFCF;
 border-color:#5c3a21;
 }
+
 .size-selector button:hover{
 background:#5c3a21;
 }
@@ -478,7 +508,6 @@ border: 1px solid #E3DFCF;
 background:#5c3a21;
 color:#E3DFCF;
 }
-/* FIX HEADER PRODUCTO */
 
 .top-bar{
 height:auto !important;

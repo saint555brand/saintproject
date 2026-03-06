@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAINT555 - Producto</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Ballet&family=UnifrakturMaguntia&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="product-body">
+
+<div class="custom-cursor"></div>
+
+<!-- NAVBAR SIMPLE -->
+
+<header class="top-bar">
+
+<div class="nav-right">
+<a href="index.html">HOME</a>
+<a href="shop.html">SHOP</a>
+</div>
+
+</header>
+
+
+<!-- LOGO IGUAL AL INDEX -->
+
+<section class="product-logo-section">
+
+<h1 class="logo product-logo">
+
+<span>Sain</span>
+
+<img src="cruzmouseblanca.png" class="cross-symbol product-cross">
+
+555
+
+</h1>
+
+</section>
+
+
+<!-- PRODUCTO -->
+
+<section class="product-container">
+
+<div class="product-image">
+<img src="producto1.jpg">
+</div>
+
+<div class="product-info">
+
+<h2>ANILLO 555</h2>
+
+<p class="product-description">
+Anillo de acero inoxidable SAINT555.
+Minimalista, pesado y diseñado para durar.
+Inspirado en la estética oscura de la colección.
+</p>
+
+<div class="size-selector">
+
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+
+</div>
+
+<button class="product-buy">COMPRAR</button>
+
+</div>
+
+</section>
+
+
+<footer class="main-footer">
+
+<p>© SAINT 555 — ALL RIGHTS RESERVED</p>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/saint___555" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/@saint___555" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const cursor=document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove",e=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+});
+
+document.querySelectorAll("a,button").forEach(el=>{
+el.addEventListener("mouseenter",()=>cursor.classList.add("hover"));
+el.addEventListener("mouseleave",()=>cursor.classList.remove("hover"));
+});
+/* SELECCION DE TALLES */
+
+const sizeButtons = document.querySelectorAll(".size-selector button");
+
+sizeButtons.forEach(btn => {
+btn.addEventListener("click", () => {
+
+sizeButtons.forEach(b => b.classList.remove("active"));
+btn.classList.add("active");
+
+});
+});
+</script>
+
+</body>
+</html>

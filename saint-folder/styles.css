@@ -215,12 +215,12 @@ font-weight:700;
 color:#5c3a21;
 transition:.3s ease;
 }
+
 .navbar .logo:hover{
 color:#3b2414;
-text-shadow:
-0 0 10px rgba(59,36,20,0.6),
-0 0 20px rgba(59,36,20,0.4);
+text-shadow: 0 0 10px rgba(59,36,20,0.6), 0 0 20px rgba(59,36,20,0.4);
 }
+
 .navbar a{
 text-decoration:none;
 margin-left:30px;
@@ -228,11 +228,10 @@ font-size:14px;
 color:#5c3a21;
 transition:.3s ease;
 }
+
 .navbar a:hover{
 color:#3b2414;
-text-shadow:
-0 0 10px rgba(59,36,20,0.6),
-0 0 20px rgba(59,36,20,0.4);
+text-shadow: 0 0 10px rgba(59,36,20,0.6), 0 0 20px rgba(59,36,20,0.4);
 }
 
 .shop-hero{
@@ -360,4 +359,122 @@ transition:.3s ease;
 .main-footer .social-icons a:hover i{
 transform:scale(1.2);
 color:#5c3a21!important;
+}
+/* ================= PRODUCT PAGE ================= */
+
+.product-body{
+background:#3b2414;
+}
+
+/* NAVBAR ARRIBA DERECHA */
+
+.top-bar{
+position:relative;
+height:0;
+}
+
+.nav-right{
+position:absolute;
+top:40px;
+right:80px;
+display:flex;
+gap:25px;
+}
+
+.top-bar a{
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+letter-spacing:2px;
+color:#E3DFCF;
+text-decoration:none;
+transition:.3s;
+}
+
+.top-bar a:hover{
+color:#5c3a21;
+}
+
+/* LOGO */
+
+.product-logo-section{
+text-align:center;
+margin-top:10px;
+margin-bottom:40px;
+}
+
+.product-cross{
+margin-left:-55px;
+}
+
+/* PRODUCTO */
+
+.product-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:80px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.product-image img{
+width:380px;
+height:480px;
+object-fit:cover;
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.product-info{
+max-width:420px;
+font-family:'Montserrat',sans-serif;
+color:#E3DFCF;
+}
+
+.product-info h2{
+letter-spacing:3px;
+margin-bottom:15px;
+}
+
+.product-description{
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.size-selector{
+display:flex;
+gap:15px;
+margin-bottom:25px;
+}
+
+.size-selector button{
+padding:10px 18px;
+border:1px solid #E3DFCF;
+background:transparent;
+color:#E3DFCF;
+cursor:none;
+transition:.3s;
+}
+.size-selector button.active{
+background:#5c3a21;
+color:#E3DFCF;
+border-color:#5c3a21;
+}
+.size-selector button:hover{
+background:#5c3a21;
+}
+
+.product-buy{
+padding:12px 35px;
+border:none;
+background:black;
+color:white;
+font-weight:600;
+letter-spacing:2px;
+cursor:none;
+transition:.35s;
+}
+
+.product-buy:hover{
+background:#5c3a21;
+color:#E3DFCF;
 }
